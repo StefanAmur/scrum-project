@@ -8,40 +8,40 @@ declare(strict_types=1);
 class Product {
     private int $id;
     private string $name;
-    private int $cat_id;
+    private int $catId;
     private float $price;
     private int $quantity;
     private string $description;
-    private string $img_path;
-    private int $seller_id;
-    private string $list_date;
+    private string $imgPath;
+    private int $sellerId;
+    private string $listDate;
     private string $condition;
-    private float $shipping_price;
+    private float $shippingPrice;
 
     public function __construct(
         int $id,
         string $name,
-        int $cat_id,
+        int $catId,
         float $price,
         int $quantity,
         string $description,
-        string $img_path,
-        int $seller_id,
-        string $list_date,
+        string $imgPath,
+        int $sellerId,
+        string $listDate,
         string $condition,
-        float $shipping_price
+        float $shippingPrice
     ) {
         $this->id = $id;
         $this->name = $name;
-        $this->cat_id = $cat_id;
+        $this->catId = $catId;
         $this->price = $price;
         $this->quantity = $quantity;
         $this->description = $description;
-        $this->img_path = $img_path;
-        $this->user_id = $seller_id;
-        $this->list_date = $list_date;
+        $this->imgPath = $imgPath;
+        $this->userId = $sellerId;
+        $this->listDate = $listDate;
         $this->condition = $condition;
-        $this->Shipping_price = $shipping_price;
+        $this->ShippingPrice = $shippingPrice;
     }
 
     public function getId(): int {
@@ -53,7 +53,7 @@ class Product {
     }
 
     public function getCatId(): int {
-        return $this->cat_id;
+        return $this->catId;
     }
 
     public function getPrice(): float {
@@ -69,15 +69,15 @@ class Product {
     }
 
     public function getImgPath(): string {
-        return $this->img_path;
+        return $this->imgPath;
     }
 
     public function getSellerId(): int {
-        return $this->seller_id;
+        return $this->sellerId;
     }
 
     public function getListDate(): string {
-        return $this->list_date;
+        return $this->listDate;
     }
 
     public function getCondition(): string {
@@ -85,6 +85,6 @@ class Product {
     }
 
     public function getShippingPrice(): float {
-        return $this->shipping_price;
+        return $this->shippingPrice;
     }
 }

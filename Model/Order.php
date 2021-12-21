@@ -3,9 +3,9 @@ class Order{
     private int $id;
     private int $product;	
     private int $quantity;	
-    private int $totalPrice;
+    private float $totalPrice;
 
-    public function __construct(int $id, int $product, int $quantity, int $totalPrice)
+    public function __construct(int $id, int $product, int $quantity, float $totalPrice)
     {
         $this->id = $id;
         $this->product = $product;

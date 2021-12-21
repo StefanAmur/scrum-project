@@ -4,18 +4,11 @@ class Admin
 {
 
     private int $id;
-
-    private string $fName;
-
-    private string $lName;
-
+    private string $firstName;
+    private string $lastName;
     private string $adminName;
-
     private string $email;
-
     private string $password;
-
-
 
     /**
      * @param int $id
@@ -25,11 +18,11 @@ class Admin
      * @param string $email
      * @param string $password
      */
-    public function __construct(int $id, string $fName, string $lName, string $adminName, string $email, string $password)
+    public function __construct(int $id, string $firstName, string $lastName, string $adminName, string $email, string $password)
     {
         $this->id = $id;
-        $this->name = $fName;
-        $this->email = $lName;
+        $this->name = $firstName;
+        $this->email = $lastName;
         $this->adminName = $adminName;
         $this->email = $email;
         $this->password = $password;
@@ -43,39 +36,37 @@ class Admin
         return $this->id;
     }
 
-
-
     /**
      * @return string
      */
-    public function getFName(): string
+    public function getFirstName(): string
     {
-        return $this->fName;
+        return $this->firstName;
     }
 
     /**
      * @param string $name
      */
-    public function setFName(string $fName): void
+    public function setFirstName(string $firstName): void
     {
-        $this->fName = $fName;
+        $this->firstName = $firstName;
     }
 
 
        /**
      * @return string
      */
-    public function getLName(): string
+    public function getLastName(): string
     {
-        return $this->lName;
+        return $this->lastName;
     }
 
     /**
      * @param string $name
      */
-    public function setLName(string $lName): void
+    public function setLastName(string $lastName): void
     {
-        $this->lName = $lName;
+        $this->lName = $lastName;
     }
 
        /**
@@ -123,7 +114,7 @@ class Admin
      */
     public function setPassword(string $password): void
     {
-        $this->fName = $password;
+        $this->firstName = $password;
     }
     
 

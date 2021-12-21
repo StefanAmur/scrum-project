@@ -5,9 +5,9 @@ declare(strict_types=1);
 class User
 {
     private int $id;
-    private string $firstname;
-    private string $lastname;
-    private string $username;
+    private string $firstName;
+    private string $lastName;
+    private string $userName;
     private string $email;
     private string $password;
     private string $addressLine;
@@ -15,12 +15,12 @@ class User
     private string $postCode;
     private string $country;
 
-    public function __construct(int $id, string $firstname, string $lastname, $username, string $email, string $password, string $addressLine, string $city, string $postCode, string $country)
+    public function __construct(int $id, string $firstName, string $lastName, $userName, string $email, string $password, string $addressLine, string $city, string $postCode, string $country)
     {
         $this->id = $id;
-        $this->firstname = $firstname;
-        $this->lastname = $lastname;
-        $this->username = $username;
+        $this->firstname = $firstName;
+        $this->lastname = $lastName;
+        $this->username = $userName;
         $this->email = $email;
         $this->password = $password;
         $this->addressLine = $addressLine;
@@ -34,19 +34,19 @@ class User
         return $this->id;
     }
 
-    public function getFirstname()
+    public function getFirstName()
     {
-        return $this->firstname;
+        return $this->firstName;
     }
 
-    public function getLastname()
+    public function getLastName()
     {
-        return $this->lastname;
+        return $this->lastName;
     }
 
-    public function getUsername()
+    public function getUserName()
     {
-        return $this->username;
+        return $this->userName;
     }
 
     public function getEmail()

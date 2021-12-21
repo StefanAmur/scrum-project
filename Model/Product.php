@@ -41,7 +41,7 @@ class Product {
         $this->userId = $sellerId;
         $this->listDate = $listDate;
         $this->condition = $condition;
-        $this->ShippingPrice = $shippingPrice;
+        $this->shippingPrice = $shippingPrice;
     }
 
     public function getId(): int {

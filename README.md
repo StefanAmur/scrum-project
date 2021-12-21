@@ -64,6 +64,7 @@ Logbook :
 - Mail to Tom question about the project - Christiaan
 - Admin class - Lakneswaran - Finished
 - Checked Class after pull request and merged.
+- updated Day 2 log.
 
 We have talked about the github merging, pull request, env file, agreed cameelCase using entire project.
 

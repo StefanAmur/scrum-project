@@ -12,8 +12,8 @@ class Admin
 
     /**
      * @param int $id
-     * @param string $fName
-     * @param string $lName
+     * @param string $firstName
+     * @param string $lastName
      * @param string $adminName
      * @param string $email
      * @param string $password
@@ -21,8 +21,8 @@ class Admin
     public function __construct(int $id, string $firstName, string $lastName, string $adminName, string $email, string $password)
     {
         $this->id = $id;
-        $this->name = $firstName;
-        $this->email = $lastName;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
         $this->adminName = $adminName;
         $this->email = $email;
         $this->password = $password;
@@ -45,7 +45,7 @@ class Admin
     }
 
     /**
-     * @param string $name
+     * @param string $firstName
      */
     public function setFirstName(string $firstName): void
     {
@@ -62,11 +62,11 @@ class Admin
     }
 
     /**
-     * @param string $name
+     * @param string $lastName
      */
     public function setLastName(string $lastName): void
     {
-        $this->lName = $lastName;
+        $this->lastName = $lastName;
     }
 
        /**
@@ -78,7 +78,7 @@ class Admin
     }
 
     /**
-     * @param string $name
+     * @param string $adminName
      */
     public function setAdminName(string $adminName): void
     {
@@ -94,7 +94,7 @@ class Admin
     }
 
     /**
-     * @param string $name
+     * @param string $email
      */
     public function setEmail(string $email): void
     {
@@ -110,11 +110,11 @@ class Admin
     }
 
     /**
-     * @param string $name
+     * @param string $password
      */
     public function setPassword(string $password): void
     {
-        $this->firstName = $password;
+        $this->password = $password;
     }
     
 

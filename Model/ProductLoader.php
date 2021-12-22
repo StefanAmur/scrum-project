@@ -60,4 +60,10 @@ class ProductLoader extends DataLoader {
             $description, $imgPath, $condition, $shippingPrice, $id
         ]);
     }
+
+    public function deleteProduct(int $id): void {
+        $sql = "DELETE FROM Product WHERE id = ?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$id]);
+    }
 }

@@ -24,6 +24,25 @@ class OrderLoader extends DataLoader{
         }
         return $orderByProductId;
     }
+
+    public function placeOrder(int $product, int $quantity, float $totalPrice): void {
+        $sql = "INSERT INTO order(product, quantity, totalPrice) VALUES(?, ?, ?)";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$product, $quantity, $totalPrice]);
+    }
+
+    
+    public function editOrder(int $product, int $quantity, float $totalPrice, int $id): void {
+        $sql = "UPDATE order SET product=?, quantity=?, totalPrice=? WHERE id=?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$product, $quantity, $totalPrice, $id]);
+    }
+
+    public function deleteOrder(int $id): void {
+        $sql = "DELETE FROM order WHERE id = ?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$id]);
+    }
 }
 
 ?>

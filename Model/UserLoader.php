@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once 'Model/DataLoader.php';
+
 class UserLoader extends DataLoader
 {
     public function getUser(): array {
@@ -13,4 +15,6 @@ class UserLoader extends DataLoader
         }
         return $users;
     }
+
+
 }

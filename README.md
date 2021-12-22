@@ -46,9 +46,26 @@
 | Product name  |  Quatities | Catergory | Price | Date      | User id |
 | ------------- | ---------- |---------- |------ |---------- | ------- |
 |  Blue pen     |      20    |  Office   | €2.50 |20/12/2021 |Shreejan |
+|  Blue pen     |      40    |  School   | €1.50 |18/12/2018 |Laknesh  |
 
 <!--User ID depends on username who is adding the products on their page.  --> 
 
 Logbook : 
 * Day 1 : Group separated, Spoken met Tom about the project. He wants to recreate Ebay to products selling and buying all over world(territories needs to be discussed ) with this webpage. Worked with Trello for split up tasks. repo created in Github. Database created with basic requirements in myphpadmin. Questions for Tom brainstorming and preparing for tomorrow.
+
+* Day 2: - standup talk(live) What we have done yesterday a preview and review about it and brainstormed next tasks.
+- Modified database,  everyone has access to database 
+- Created dotenv file, DataLoader in model
+- Created .env
+- Product class - Stefan - Finished
+- User Class - Sreejan - Finished
+- Catagory Class - Lakneswaran - Finished
+- Order Class - Binayak - Finished
+- Mail to Tom question about the project - Christiaan
+- Admin class - Lakneswaran - Finished
+- Checked Class after pull request and merged.
+- updated Day 2 log.
+
+We have talked about the github merging, pull request, env file, agreed cameelCase using entire project.
+
 

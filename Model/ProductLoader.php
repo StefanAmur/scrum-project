@@ -38,4 +38,26 @@ class ProductLoader extends DataLoader {
             $imgPath, $sellerId, $listDate, $condition, $shippingPrice
         ]);
     }
+
+    public function editProduct(
+        string $name,
+        int $catId,
+        float $price,
+        int $quantity,
+        string $description,
+        string $imgPath,
+        string $condition,
+        float $shippingPrice,
+        int $id
+    ): void {
+        $sql = "UPDATE Product SET 
+                `name`=?, category=?, price=?, quantity=?, 
+                `description`=?, `image`=?, `condition`=?, shipping_price=?  
+                WHERE id=?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([
+            $name, $catId, $price, $quantity,
+            $description, $imgPath, $condition, $shippingPrice, $id
+        ]);
+    }
 }

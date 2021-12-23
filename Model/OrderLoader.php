@@ -9,9 +9,9 @@ class OrderLoader extends DataLoader{
         $sql = "SELECT * FROM `order` INNER JOIN product ON 'order.id' = product.id;";
         $stmt = $this->connect()->query($sql);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            array_push($students, $row);
+            array_push($orders, $row);
         }
-        return $students;
+        return $orders;
     }
 
     public function getOrdersByProductId(int $id) {

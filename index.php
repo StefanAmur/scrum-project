@@ -1,9 +1,16 @@
 <?php
+
 declare(strict_types=1);
 
 //include all your model files here
+require 'Model/DotEnv.php';
+$env = new DotEnv(__DIR__ . '/.env');
+$env->load();
+require 'Model/DataLoader.php';
 require 'Model/User.php';
 require 'Model/UserLoader.php';
+require 'Model/Product.php';
+require 'Model/ProductLoader.php';
 //include all your controllers here
 require 'Controller/HomepageController.php';
 require 'Controller/InfoController.php';
@@ -12,7 +19,7 @@ require 'Controller/InfoController.php';
 //this file should never be more than 20 lines of code!
 
 $controller = new HomepageController();
-if(isset($_GET['page']) && $_GET['page'] === 'info') {
+if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new InfoController();
 }
 

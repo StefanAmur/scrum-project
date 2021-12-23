@@ -25,7 +25,7 @@ class OrderLoader extends DataLoader{
         return $orderByProductId;
     }
 
-    public function placeOrder(int $product, int $quantity, float $totalPrice): void {
+    public function addOrder(int $product, int $quantity, float $totalPrice): void {
         $sql = "INSERT INTO order(product, quantity, totalPrice) VALUES(?, ?, ?)";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$product, $quantity, $totalPrice]);

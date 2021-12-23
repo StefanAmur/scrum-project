@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 class Order{
     private int $id;
     private int $product;	

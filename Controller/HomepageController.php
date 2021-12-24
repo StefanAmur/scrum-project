@@ -7,7 +7,9 @@ class HomepageController {
     public function render(array $GET, array $POST) {
         //this is just example code, you can remove the line below
         // $user = new User('John Smith');
-        $category = new Category($id, $name, $description, $image);
+        $categoryLoader = new CategoryLoader();
+        $categories = $categoryLoader->getCategories();
+        var_dump($categories);
         
         // var_dump($date);
         // $productLoader->addProduct('super cheap glider', 1, 5000, 1, 'very old but gold glider', '../uploads/old_glider.jpg', 1, $date, 'used', 300);

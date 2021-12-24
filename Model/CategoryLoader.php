@@ -6,14 +6,14 @@ require_once 'Model/DataLoader.php';
 
 class CategoryLoader extends DataLoader {
 
-    public function getCategory(): array {
-        $category = [];
+    public function getCategories(): array {
+        $categories = [];
         $sql = "SELECT * FROM Category";
         $stmt = $this->connect()->query($sql);
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            array_push($products, $row);
+            array_push($categories, $row);
         }
-        return $category;
+        return $categories;
     }
 
     public function addCategory(

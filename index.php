@@ -11,6 +11,8 @@ require 'Model/User.php';
 require 'Model/UserLoader.php';
 require 'Model/Product.php';
 require 'Model/ProductLoader.php';
+require 'Model/Category.php';
+require 'Model/CategoryLoader.php';
 //include all your controllers here
 require 'Controller/HomepageController.php';
 require 'Controller/InfoController.php';

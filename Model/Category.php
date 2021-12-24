@@ -8,10 +8,6 @@ class Category
     private string|null $description;
     private string|null $image;
 
-
-
-
-
     /**
      * @param int $id
      * @param string $name

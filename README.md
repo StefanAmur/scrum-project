@@ -69,3 +69,89 @@ Logbook :
 We have talked about the github merging, pull request, env file, agreed cameelCase using entire project.
 
 
+Day 3
+
+Standup meeting : splited everyone to create their own controller for the class.
+Biniyak finished with Ordercontroller - working
+Full day - introduction of Symfony
+
+Day 4
+
+Stand up meeting:  we took decision to work with Symfony as Backend.
+Pull request controlled and what we done till now are updated in Github.
+Installation Composer and Symfony. 
+- Sreejan and Christian are not doing well. He is doing further with the controller of userClass.
+- Finished the controller
+- Lakneswaran and Stefan encounter error’s in Database - fixed with installation HeidiSQL.
+- Stefan and Binayak installed composer and symfony.
+- Lakneswaran Finshed with CategoryLoder en tested database php - working.
+- Standup meeting at the end of the Day: Rechanging workflow.
+
+Day 5
+
+Stand up meeting: Talked with Sreejan about the changes of the workflow and Symfony.
+- Category pushed in github - Controlled. Files of main up to date of everyone. 
+- Sreejan and Lakneswaran Installed Symfony and composer. Error fiksed with the group.
+-localhost:9003 (through xdebug.client_host/xdebug.client_port) :-( =>
+Solution : xdebug.log_level=0 was the solution for me. Go to the xampp ->php->php.ini paste it below and save. Then start with composer installation. Working. 
+- Symfony experiment day. Requirement to finish after this weekend are need to share their experience with the group what they have learned about their own project. 
+- New task updated on Trello.
+-28/12/2021 is deadline for basic requirement for Backend. Lakneswaran and Binayak will start on 03/01/2022 with the fontend. The rest will working with “nice to have” in Backend.
+- The name Tom wants for this project doesn’t agree with the team. So planning to give a Better name. Finish on Next Monday.
+- Stand up meeting at the end of day : 
+
+
+
+What is Symfony? 
+
+- Sympony is a PHP web application framework and a set of reuasable PHP components/libararies. => to creat Websites and web application.
+- It’s also Open-souce, replace repetitive codingtext. Like laravell
+- Folder structure => APP, Bin, src, var, vendor and web.
+- App folder - configuration->Parameters, Resources ->frontend view folder create in this. 
+-Bin - Console php command promt can be user here.
+- src - controller and model(entity)
+- var - cache -developing and Production; logs-performs stores here; session-Log in  and log out
+- vendor - Third parties library like php excel,fdf,...
+- web - app.php -> production app_dev.php -> development. 
+
+Symfony controllers
+
+- Controller is responsible for handling each request that comes into symfony application. 
+- User request -> controller response. 
+- By default we get DefaultController class => “src/AppBundle/Controlleré 
+
+<?php
+
+Namespace appBundle/controller;
+Use sympony\..\Controller;
+Use ./response;
+Class DefaultController extends Controller{} ?>
+
+Base framework functionality. 
+
+Symfony - Routing
+
+- Routing maps request to a specific controllers method. In URI has the following three parts
+
+. Hostname segment => website name www.blac.com
+. Path segment => what page ex. index
+. Query segment => we are sending data with URI.
+
+Symfony - View Engine
+
+- A view layer is the presentation layer of the MVC application. It separates the application logic from the presentation logic. 
+
+App/resources/View/
+
+Symfony uses a powerful template language called twig. Twig allows you to write concise and readable templates in a very easy manner. Twig won’t process PHP tags. 
+
+Symfony - View engine 
+
+{{   }} - prints a variable 
+{% %} - Execute a function. If/for condition or to set variable.
+{# #} - comments
+
+What is Doctrine? 
+
+- Doctrine 2 is an object-relational mapper (ORM) for PHP 71+ that provides transparent persistence for PHP objects. 
+Php object code -> create table, database.

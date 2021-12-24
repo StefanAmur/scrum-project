@@ -14,7 +14,7 @@ class OrderController{
     public function addOrders(){
 
         $orderLoader = new OrderLoader();
-        $students = $orderLoader->getOrders();
+        $orders = $orderLoader->getOrders();
 
         if (isset($POST['add'])) {
             $orderLoader->addOrder($POST['product'], (int)$POST['quantity'], (int)$POST['totalPrice']);
